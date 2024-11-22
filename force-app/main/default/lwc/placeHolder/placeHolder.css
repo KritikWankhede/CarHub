@@ -1,0 +1,13 @@
+div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: orangered;
+}
+
+img{
+    height:120px;
+    max-width: initial;
+    pointer-events: none;
+}

@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Similar Car" icon-name="standard:account">
+
+        <div class="slds-p-around_medium">
+            <template if:false={ck}>
+                <lightning-button label="Fetch Similar Car" onclick={onclickHandler}>
+                </lightning-button>
+            </template>
+        </div>
+        <div >
+            <div class="content">
+                <template if:true={cars.length}>
+                    <template for:each={cars} for:item="car">
+                        <c-car-tile key={car.id} car={car} onselected={handleNavigation}></c-car-tile>
+                    </template>
+                </template>
+            </div>
+            <template if:false={cars}>
+                <p>No Similar Car Available</p>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

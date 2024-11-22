@@ -1,0 +1,23 @@
+section{
+    background: #eeecec;
+    padding: 0.25rem;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 0.75rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+img.beforeChange{
+    height:120px;
+    max-width: initial;
+    pointer-events: none;
+}
+
+.beforeSelecting{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: orangered;
+}

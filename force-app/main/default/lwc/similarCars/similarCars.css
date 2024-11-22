@@ -1,0 +1,18 @@
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: bold;
+    
+}
+/* img{
+    height:120px;
+    max-width: initial;
+    pointer-events: none;
+} */
+c-car-tile{
+    min-width: 200px;
+    flex: 1;
+}

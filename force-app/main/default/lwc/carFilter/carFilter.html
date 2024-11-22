@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="Filters" icon-name="standard:calibration">
+        <div class="slds-m-horizontal_medium">
+            <lightning-input type="search" label="Search" onchange={handleSearch} 
+                value={filters.searchKey}></lightning-input>
+            <section class="slider_section">
+                <lightning-slider label="Max Price" step="100" min="0" max="999999"
+                    value={filters.maxPrice} onchange={handlePriceChange}>
+                </lightning-slider>
+            </section>
+            <section class="category">
+                <h2>Category</h2>
+                <template  if:true={categoryPicklistValues.data}>
+                    <template for:each={categoryPicklistValues.data.values} for:item="category">
+                        <lightning-input key={category.value} type="checkbox" label={category.label}
+                            checked  onchange={handleChange}
+                            data-name="categoryPicklistValues" data-value={category.value}>
+                        </lightning-input>
+                    </template>
+                </template>
+                <template if:true={categoryPicklistValues.error}>
+                    <h3>Error Handling Category</h3>
+                </template>
+            </section>
+            <section class="Manufacturer">
+                <h2>Manufacturer</h2>
+                <template  if:true={manufaturerPicklistValues.data}>
+                    <template for:each={manufaturerPicklistValues.data.values} for:item="manu">
+                        <lightning-input key={manu.value} type="checkbox" label={manu.label}
+                            checked  onchange={handleChange}
+                            data-name="manufaturerPicklistValues" data-value={manu.value}>
+                        </lightning-input>
+                    </template>
+                </template>
+                <template if:true={manufaturerPicklistValues.error}>
+                    <h3>Error Handling Manufacturer</h3>
+                </template>
+            </section>
+        </div>
+
+    </lightning-card>
+</template>
