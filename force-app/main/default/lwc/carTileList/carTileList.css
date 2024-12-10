@@ -12,3 +12,9 @@ c-car-tile{
     background: #b4bdc5;
     border-radius: 10px;
 }
+
+.check{
+    border-radius: 3px;
+    color: magenta;
+    background-color: turquoise;
+}
